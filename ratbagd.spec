@@ -9,7 +9,7 @@ URL:            https://github.com/libratbag/libratbag
 Source0:        https://github.com/libratbag/libratbag/archive/v%{version}/libratbag-%{version}.tar.gz
 
 # Fix compiling with Clang
-https://patch-diff.githubusercontent.com/raw/libratbag/libratbag/pull/1069.patch
+Patch0:         https://patch-diff.githubusercontent.com/raw/libratbag/libratbag/pull/1069.patch
 
 BuildRequires:  meson
 BuildRequires:  swig
