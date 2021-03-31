@@ -8,6 +8,9 @@ License:        MIT
 URL:            https://github.com/libratbag/libratbag
 Source0:        https://github.com/libratbag/libratbag/archive/v%{version}/libratbag-%{version}.tar.gz
 
+# Fix compiling with Clang
+https://patch-diff.githubusercontent.com/raw/libratbag/libratbag/pull/1069.patch
+
 BuildRequires:  meson
 BuildRequires:  swig
 BuildRequires:  pkgconfig(glib-2.0)
@@ -62,11 +65,12 @@ the prime tool for debugging.
 %{_includedir}/*
 
 %prep
+%autopatch -p1
 %setup -q -n libratbag-%{version}
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %meson
 %meson_build
 
