@@ -65,7 +65,8 @@ the prime tool for debugging.
 %setup -q -n libratbag-%{version}
 
 %build
-
+export CC=gcc
+export CXX=g++
 %meson
 %meson_build
 
