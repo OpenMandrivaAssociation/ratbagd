@@ -1,6 +1,6 @@
 Name:           ratbagd
 Version:        0.15
-Release:        %mkrel 1
+Release:        1
 Summary:        A DBus daemon to configure input devices, mainly gaming mice
 Group:          System/Configuration
 License:        MIT
@@ -15,15 +15,15 @@ BuildRequires:  pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libevdev)
 BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(systemd)
-BuildRequires:  libunistring-devel
-BuildRequires:  python3-evdev
-BuildRequires:  pkgconfig(python3)
+BuildRequires:  pkgconfig(libunistring)
+BuildRequires:  python3dist(evdev)
+BuildRequires:  pkgconfig(python)
 
 #needed for testsuite
 BuildRequires:  valgrind
 BuildRequires:  pkgconfig(check)
-BuildRequires:  python3-lxml
-BuildRequires:  python3-gobject3
+BuildRequires:  python3dist(lxml)
+BuildRequires:  python3dist(pygobject)
 
 #GUI for configuration
 Recommends:     piper
