@@ -65,7 +65,7 @@ the prime tool for debugging.
 %{_includedir}/*
 
 %prep
-%autopatch -p1
+%autopatch -p0
 %setup -q -n libratbag-%{version}
 
 %build
