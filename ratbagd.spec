@@ -9,7 +9,8 @@ URL:            https://github.com/libratbag/libratbag
 Source0:        https://github.com/libratbag/libratbag/archive/v%{version}/libratbag-%{version}.tar.gz
 
 # Fix compiling with Clang
-Patch0:         https://patch-diff.githubusercontent.com/raw/libratbag/libratbag/pull/1069.patch
+Patch0:         1069.patch
+# based on https://patch-diff.githubusercontent.com/raw/libratbag/libratbag/pull/1069.patch
 
 BuildRequires:  meson
 BuildRequires:  swig
@@ -65,7 +66,7 @@ the prime tool for debugging.
 %{_includedir}/*
 
 %prep
-%autopatch -p0
+%autopatch -p1
 %setup -q -n libratbag-%{version}
 
 %build
