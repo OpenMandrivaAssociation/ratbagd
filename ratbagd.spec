@@ -9,7 +9,7 @@ URL:            https://github.com/libratbag/libratbag
 Source0:        https://github.com/libratbag/libratbag/archive/v%{version}/libratbag-%{version}.tar.gz
 
 # Fix compiling with Clang
-Patch0:         1069.patch
+#Patch0:         1069.patch
 # based on https://patch-diff.githubusercontent.com/raw/libratbag/libratbag/pull/1069.patch
 
 BuildRequires:  meson
@@ -70,8 +70,8 @@ the prime tool for debugging.
 %setup -q -n libratbag-%{version}
 
 %build
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 %meson
 %meson_build
 
