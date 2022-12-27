@@ -1,5 +1,5 @@
 Name:           ratbagd
-Version:        0.16
+Version:        0.17
 Release:        1
 Summary:        A DBus daemon to configure input devices, mainly gaming mice
 Group:          System/Configuration
